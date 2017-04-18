@@ -22,8 +22,9 @@ navegador.
 $ cd TallerApp
 $ ionic serve
 ```
+## [**Sesión 1:** Introducción](http://slides.com/anlijudavid/apps)
+## [**Sesión 2:** Estructura de un proyecto Ionic 2](./sesiones/Sesion1.md)
 
-# [Ver documentación en línea](https://juliandavidmr.github.io/TallerAppsIonic)
 
 Licencia MIT
 [@juliandavidmr](https://github.com/juliandavidmr)
