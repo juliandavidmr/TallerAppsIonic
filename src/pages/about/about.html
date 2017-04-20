@@ -7,5 +7,9 @@
 </ion-header>
 
 <ion-content padding>
-
+  <ion-list>
+    <button ion-item *ngFor="let item of listado">
+      {{ item }}
+    </button>  
+  </ion-list>
 </ion-content>

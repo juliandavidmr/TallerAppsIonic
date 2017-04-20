@@ -7,6 +7,8 @@ import { NavController } from 'ionic-angular';
 })
 export class AboutPage {
 
+  listado = ['Sesión 1', 'Sesión 2', 'Sesión 3']
+  
   constructor(public navCtrl: NavController) {
 
   }
