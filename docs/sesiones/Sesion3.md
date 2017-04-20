@@ -13,7 +13,7 @@
 
 # **Conceptos**
 <center>
-<img src="../recursos/component-databinding.png" title="Data binding"/>
+<img src="../recursos/component-databinding.png" title="Data binding en Angular & Ionic 2"/>
 </center>
 
 
@@ -74,7 +74,7 @@ Angular 2 ofrece la directiva `*ngIf` para establecer condiciones.
 ```html
 <label *ngIf="i > 1">El index es mayor que 1</label>
 ```
-Donde `i` es una variable generada por el `ngFor`. Ver ejemplo de [listar Cards]().
+Donde `i` es una variable generada por el `ngFor`. Ver ejemplo de listar Cards. [Ver más](https://github.com/juliandavidmr/TallerAppsIonic/blob/4d40320d8e55b1279e8964c0386f12fb7814f4a5/src/pages/about/about.html#L23)
 
 
 ### Mas información
@@ -82,3 +82,4 @@ Donde `i` es una variable generada por el `ngFor`. Ver ejemplo de [listar Cards]
 - [Documentación completa de `ngFor`](https://angular.io/docs/ts/latest/guide/template-syntax.html#!#ngFor)
 - [Binding Angular 2](https://blog.thoughtram.io/angular/2016/10/13/two-way-data-binding-in-angular-2.html)
 - [Tutorial completo de directivas](http://blog.enriqueoriol.com/2016/07/introduccion-angular-2-parte-ii-binding-directivas.html)
+- [Documentación Ionic 2: List](http://ionicframework.com/docs/components/#lists)
