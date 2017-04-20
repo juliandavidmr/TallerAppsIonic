@@ -10,6 +10,17 @@
   <ion-list>
     <button ion-item *ngFor="let item of listado">
       {{ item }}
-    </button>  
+    </button>
   </ion-list>
+
+  <ion-card *ngFor="let item of listado; let i = index">
+    <ion-card-header>
+      Card {{ i }}
+    </ion-card-header>
+    <ion-card-content>
+      Contenido de la variable item: {{ item }}
+      <br/>
+      <label *ngIf="i > 1">El index es mayor que 1</label>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
