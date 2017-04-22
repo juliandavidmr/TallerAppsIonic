@@ -76,6 +76,71 @@ Angular 2 ofrece la directiva `*ngIf` para establecer condiciones.
 ```
 Donde `i` es una variable generada por el `ngFor`. Ver ejemplo de listar Cards. [Ver más](https://github.com/juliandavidmr/TallerAppsIonic/blob/4d40320d8e55b1279e8964c0386f12fb7814f4a5/src/pages/about/about.html#L23)
 
+----
+
+- ### **ngModel**: Pasar objetos de template a component y viceversa.
+
+En el componente, se agregan los atributos a usar. 
+En este caso se usan dos variables de tipo `string` para el intercambio de datos entre _template_ y _component_. [Ver màs]()
+```ts
+email: string = ''
+passw: string = ''
+```
+Posteriormente se usa la directiva de Angular 2, `[(ngModel)]`, para la especificaciòn de los objetos que han sido creados en el componente. [Ver màs]()
+
+```html
+<ion-input type="email" placeholder="Entrada de correo" [(ngModel)]="email"></ion-input>
+```
+
+Una vez terminado lo anterior, se procede a verificar el `binding` mediante la visualizaciòn de los datos al instante en que se escribe el siguiente segmento de codigo:
+[Ver màs]()
+```html
+<ion-item>
+  {{ email }} & {{ passw }}
+</ion-item>
+```
+_**Nota:** Recordar que `{{ xyz }}` es la sintaxis para llamar elementos directamente desde el componente, donde `xyz` es el nombre del objeto y `{{ }}` es la manera en que Angular2 realiza esta funciòn. El simbolo `&` es solo decoraciòn, no corresponde a ninguna funciòn de Angular u Ionic._
+
+----
+
+- ### **Eventos: _Click_**
+
+> Se requiere hacer la funciòn de eliminar elementos de una lista cuando se presiona click a un item de la misma _(se elimina el item seleccionado)_
+
+Tenemos el siguiente segmento de còdigo que se muestra una lista de elementos existentes en el objeto `lista` _(Ubicado en el home.ts)_ [Ver màs]()
+```html
+<!-- home.html -->
+
+<ion-list>
+  <ion-item *ngFor="let item of lista; let i = index">
+    {{ item }}
+  </ion-item>
+</ion-list>
+```
+
+Usar la directiva `(click)` propia de Angular. Ejecuta una funcion determinada cada vez que un elemento detecta el evento de click sobre si mismo.
+
+```html
+<!-- home.html -->
+
+<ion-list>
+  <ion-item *ngFor="let item of lista; let i = index" (click)="remove(i)">
+    {{ item }}
+  </ion-item>
+</ion-list>
+```
+Notar que se añadiò la funcion `remove` junto con la directiva `(click)`. Cuando la funciòn se ejecuta, se le envia el paràmetro `i` que corresponde al indice o `index` creado por la anterior directiva, `*ngFor`.
+
+La funciòn `remove(i)` ejecuta:
+
+```ts
+// Home.ts
+
+remove(i: number) {
+  this.lista = this.lista.filter((val, index) => i !== index)
+}
+```
+Donde se hace un filtrado de elementos mediante la funciòn `filter`. Filter es un metodo propio de las listas en javascript. [Ver màs]()
 
 ### Mas información
 
