@@ -23,7 +23,8 @@ $ cd TallerApp
 $ ionic serve
 ```
 
-# [Ver documentación en línea](https://juliandavidmr.github.io/TallerAppsIonic)
+# [Ver documentación del taller](https://github.com/juliandavidmr/TallerAppsIonic/tree/master/docs)
+## [Ver documentación en línea](https://juliandavidmr.github.io/TallerAppsIonic)
 
 Licencia MIT
 [@juliandavidmr](https://github.com/juliandavidmr)

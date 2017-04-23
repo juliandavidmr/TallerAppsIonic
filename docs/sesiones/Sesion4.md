@@ -24,7 +24,7 @@ interface IMensaje {
   fecha?: Date
 }
 ```
-Donde `|` ayuda a especificar multiples tipos de datos para un solo objeto, en ese caso `contenido` puede ser de tipo `string` o `number`. El simbolo de interrogaciòn `?` convierte una objeto en opcional, es decir, no es obligatorio usarlo. [Ver màs]()
+Donde `|` ayuda a especificar multiples tipos de datos para un solo objeto, en ese caso `contenido` puede ser de tipo `string` o `number`. El simbolo de interrogaciòn `?` convierte una objeto en opcional, es decir, no es obligatorio usarlo. [Ver màs](https://github.com/juliandavidmr/TallerAppsIonic/blob/083dc35948a7de432aae13730c5a30d2be3ea8c6/src/pages/home/home.ts#L4)
 
 Posteriormente, se crea un objeto que usa la interface creada anteriormente:
 
@@ -49,7 +49,7 @@ addMensaje() {
 }
 ```
 
-Donde [`texto`]() es una objeto rellenado automaticamente con la directiva `[(ngModel)]` del template. [Ver màs]().
+Donde [`texto`](https://github.com/juliandavidmr/TallerAppsIonic/blob/083dc35948a7de432aae13730c5a30d2be3ea8c6/src/pages/home/home.ts#L15) es una objeto rellenado automaticamente con la directiva `[(ngModel)]` del template. [Ver màs](https://github.com/juliandavidmr/TallerAppsIonic/blob/083dc35948a7de432aae13730c5a30d2be3ea8c6/src/pages/home/home.ts#L21).
 
 **Template: Captura de texto**
 
@@ -58,7 +58,7 @@ Donde [`texto`]() es una objeto rellenado automaticamente con la directiva `[(ng
 
 <ion-input type="text" placeholder="Escriba un mensaje" [(ngModel)]="texto"></ion-input>
 ```
-[Ver màs]()
+[Ver màs](https://github.com/juliandavidmr/TallerAppsIonic/blob/083dc35948a7de432aae13730c5a30d2be3ea8c6/src/pages/home/home.html#L11)
 
 
 **Template: Detecciòn de evento click**
@@ -67,7 +67,7 @@ Donde [`texto`]() es una objeto rellenado automaticamente con la directiva `[(ng
 <!-- home.html -->
 <button ion-button full outline (click)="addMensaje()">Agregar</button>
 ```
-[Ver màs]()
+[Ver màs](https://github.com/juliandavidmr/TallerAppsIonic/blob/083dc35948a7de432aae13730c5a30d2be3ea8c6/src/pages/home/home.html#L15)
 
 
 **Template: Mostrar listado de mensajes**
@@ -82,9 +82,8 @@ Donde [`texto`]() es una objeto rellenado automaticamente con la directiva `[(ng
   </ion-item>
 </ion-list>
 ```
-[Ver màs]()
+[Ver màs](https://github.com/juliandavidmr/TallerAppsIonic/blob/083dc35948a7de432aae13730c5a30d2be3ea8c6/src/pages/home/home.html#L18)
 
 ### Màs información
 
 - [Interfaces en typescript](https://www.uno-de-piera.com/interfaces-en-typescript/)
-- []()
