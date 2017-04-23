@@ -1,5 +1,7 @@
 # **Sesión 3**
 
+> Recomendado: Leer [documentacion aquì](https://github.com/juliandavidmr/TallerAppsIonic/tree/master/docs).
+
 1. **Ionic CLI**
     - Crear proyecto: `ionic start MyApp --v2`.
     - Correr servidor de desarrollo: `ionic serve`.
@@ -9,6 +11,8 @@
 3. **Bindings & Directivas**
     - `ngFor`
     - `ngIf`
+    - `click`
+    - `ngModel`
 2. **Repaso Typescript.**
 
 # **Conceptos**
@@ -81,12 +85,12 @@ Donde `i` es una variable generada por el `ngFor`. Ver ejemplo de listar Cards. 
 - ### **ngModel**: Pasar objetos de template a component y viceversa.
 
 En el componente, se agregan los atributos a usar. 
-En este caso se usan dos variables de tipo `string` para el intercambio de datos entre _template_ y _component_. [Ver màs]()
+En este caso se usan dos variables de tipo `string` para el intercambio de datos entre _template_ y _component_. [Ver màs](https://github.com/juliandavidmr/TallerAppsIonic/blob/4c985d2c177072ddd7b329240fb8cebd31babbce/src/pages/home/home.ts#L11)
 ```ts
 email: string = ''
 passw: string = ''
 ```
-Posteriormente se usa la directiva de Angular 2, `[(ngModel)]`, para la especificaciòn de los objetos que han sido creados en el componente. [Ver màs]()
+Posteriormente se usa la directiva de Angular 2, `[(ngModel)]`, para la especificaciòn de los objetos que han sido creados en el componente. [Ver màs](https://github.com/juliandavidmr/TallerAppsIonic/blob/4c985d2c177072ddd7b329240fb8cebd31babbce/src/pages/home/home.html#L14)
 
 ```html
 <ion-input type="email" placeholder="Entrada de correo" [(ngModel)]="email"></ion-input>
@@ -107,7 +111,7 @@ _**Nota:** Recordar que `{{ xyz }}` es la sintaxis para llamar elementos directa
 
 > Se requiere hacer la funciòn de eliminar elementos de una lista cuando se presiona click a un item de la misma _(se elimina el item seleccionado)_
 
-Tenemos el siguiente segmento de còdigo que se muestra una lista de elementos existentes en el objeto `lista` _(Ubicado en el home.ts)_ [Ver màs]()
+Tenemos el siguiente segmento de còdigo que se muestra una lista de elementos existentes en el objeto `lista` _(Ubicado en el home.ts)_ [Ver màs](https://github.com/juliandavidmr/TallerAppsIonic/blob/4c985d2c177072ddd7b329240fb8cebd31babbce/src/pages/home/home.html#L26)
 ```html
 <!-- home.html -->
 
@@ -140,7 +144,7 @@ remove(i: number) {
   this.lista = this.lista.filter((val, index) => i !== index)
 }
 ```
-Donde se hace un filtrado de elementos mediante la funciòn `filter`. Filter es un metodo propio de las listas en javascript. [Ver màs]()
+Donde se hace un filtrado de elementos mediante la funciòn `filter`. Filter es un metodo propio de las listas en javascript. [Ver màs](https://github.com/juliandavidmr/TallerAppsIonic/blob/4c985d2c177072ddd7b329240fb8cebd31babbce/src/pages/home/home.ts#L22)
 
 ### Mas información
 

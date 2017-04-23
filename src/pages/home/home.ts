@@ -1,26 +1,28 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+interface IMensaje {
+  contenido: string | number
+  fecha?: Date
+}
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
 
-  lista = []
-  email: string = ''
-  passw: string = ''
+  texto: string = ''
 
-  constructor(public navCtrl: NavController) {
+  lista: IMensaje[] = []
 
-  }
+  constructor(public navCtrl: NavController) {}
 
-  add() {
-    this.lista.push(this.email)
-  }
-
-  remove(i: number) {
-    this.lista = this.lista.filter((val, index) => i !== index)
+  addMensaje() {
+    this.lista.push({
+      contenido: this.texto,
+      fecha: new Date()
+    })
   }
 
 }

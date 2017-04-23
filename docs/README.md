@@ -22,9 +22,10 @@ navegador.
 $ cd TallerApp
 $ ionic serve
 ```
-## [**Sesión 1:** Introducción](http://slides.com/anlijudavid/apps)
-## [**Sesión 2:** Estructura de un proyecto Ionic 2](./sesiones/Sesion2.md)
-## [**Sesión 3:** Ambiente Ionic: CLI & UI. Parte 1.](./sesiones/Sesion3.md)
+## [**Sesión 1.** Introducción](http://slides.com/anlijudavid/apps)
+## [**Sesión 2.** Estructura de un proyecto Ionic 2](./sesiones/Sesion2.md)
+## [**Sesión 3.** Ambiente Ionic: CLI & UI](./sesiones/Sesion3.md)
+## [**Sesión 4.** Typescript: Interfaces](./sesiones/Sesion4.md)
 
 
 Licencia MIT

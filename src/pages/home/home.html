@@ -7,24 +7,17 @@
 <ion-content padding>
   <ion-list>
     <ion-item>
-      {{ email }} & {{ passw }}
-    </ion-item>
-    <ion-item>
-      <ion-label color="primary" stacked>Correo</ion-label>
-      <ion-input type="email" placeholder="Entrada de correo" [(ngModel)]="email"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label color="primary" stacked>Contraseña</ion-label>
-      <ion-input type="password" placeholder="Entrada de contraseña" [(ngModel)]="passw"></ion-input>
+      <ion-label color="primary" stacked>Mensaje</ion-label>
+      <ion-input type="text" placeholder="Escriba un mensaje" [(ngModel)]="texto"></ion-input>
     </ion-item>
   </ion-list>
 
-  <button ion-button full outline (click)="add()">Agregar</button>
+  <button ion-button full outline (click)="addMensaje()">Agregar</button>
 
   <ion-list>
-    <ion-item *ngFor="let item of lista; let i = index" (click)="remove(i)">
-      {{ item }}
+    <ion-item *ngFor="let item of lista">
+      <h2>{{ item.contenido }}</h2>
+      <p>{{ item.fecha }}</p>
     </ion-item>
   </ion-list>
 </ion-content>
