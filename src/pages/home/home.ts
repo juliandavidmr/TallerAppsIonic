@@ -11,12 +11,14 @@ interface IMensaje {
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  
   texto: string = ''
 
   lista: IMensaje[] = []
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController) {
+
+  }
 
   addMensaje() {
     this.lista.push({
@@ -24,5 +26,4 @@ export class HomePage {
       fecha: new Date()
     })
   }
-
 }

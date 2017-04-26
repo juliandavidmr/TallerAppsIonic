@@ -7,7 +7,10 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
+  <button ion-button color="secondary" (click)="AddItem()">Añadir elemento</button>
+  <button ion-button color="secondary" (click)="Quitar()">Quitar elemento</button>
+  <button ion-button color="secondary" (click)="a()">rever</button>
+  <ion-list no-lines>
     <button ion-item *ngFor="let item of listado">
       {{ item }}
     </button>
@@ -15,11 +18,10 @@
 
   <ion-card *ngFor="let item of listado; let i = index">
     <ion-card-header>
-      Card {{ i }}
+      {{ i + 1 }}
     </ion-card-header>
     <ion-card-content>
-      Contenido de la variable item: {{ item }}
-      <br/>
+      {{ item }}
       <label *ngIf="i > 1">El index es mayor que 1</label>
     </ion-card-content>
   </ion-card>

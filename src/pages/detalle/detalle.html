@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Detalle
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="card-background-page">
+  <ion-card>
+    <img [src]="info.image" />
+    <div class="card-title">{{ info.descripcion }}</div>
+    <div class="card-subtitle">{{ info.tags }}</div>
+  </ion-card>
+</ion-content>

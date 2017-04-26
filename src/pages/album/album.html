@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Album
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar 
+    [(ngModel)]="texto" 
+    [showCancelButton]="shouldShowCancel" 
+    (ionInput)="buscar($event)">
+  </ion-searchbar>
+
+  <ion-card *ngFor="let item of fotos" (click)="abrirDetalle(item)">
+    <ion-card-content>
+      <ion-card-title>
+        {{ item.descripcion }}
+      </ion-card-title>
+      <p>
+        <ion-badge item-right *ngFor="let tag of item.tags">
+          {{ tag }}
+        </ion-badge>
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

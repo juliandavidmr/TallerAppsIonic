@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="secondary">
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
@@ -7,17 +7,20 @@
 <ion-content padding>
   <ion-list>
     <ion-item>
-      <ion-label color="primary" stacked>Mensaje</ion-label>
-      <ion-input type="text" placeholder="Escriba un mensaje" [(ngModel)]="texto"></ion-input>
+      <ion-label fixed>Mensaje</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="texto"></ion-input>
     </ion-item>
   </ion-list>
 
-  <button ion-button full outline (click)="addMensaje()">Agregar</button>
+  <button ion-button full outline color="secondary" (click)="addMensaje()">
+    Añadir elemento
+  </button>
 
   <ion-list>
-    <ion-item *ngFor="let item of lista">
+    <ion-item *ngFor="let item of lista; let i = index">
       <h2>{{ item.contenido }}</h2>
-      <p>{{ item.fecha }}</p>
+      <p>{{ item.fecha }}</p>      
     </ion-item>
   </ion-list>
+
 </ion-content>
